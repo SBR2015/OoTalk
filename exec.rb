@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
 
 # ライブラリの読み込み
 Dir[File.expand_path('../lib', __FILE__) << '/*.rb'].each do |file|
@@ -16,6 +17,9 @@ num5 = Constant.new(0.04)
 num6 = Constant.new(0.2)
 num8 = Constant.new(8)
 num10 = Constant.new(10)
+
+#変数の宣言
+var1 = Variable.new(:id1 =>5)
 
 # 演算子の宣言
 # operator = Array.new(100){Operator.new}
@@ -70,3 +74,4 @@ operator.push "#{notequal2.to_s} = #{notequal2.exec}"
 operator.each do |o|
   puts o
 end
+ 

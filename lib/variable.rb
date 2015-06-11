@@ -5,17 +5,22 @@ class Variable < Expression
 
   private
 
-    def initialize(id = nil)
+    def initialize(id=nil)
       @id = id
     end
   
   public
 
-    def exec
-      @id
+    def exec(vars={})
+       
+       vars={@value => nil,}
+       vars.merge(vars)
+       vars.each do |key,value| 
+       puts "#{key} => #{value}"
+      end
     end
 
     def to_s
-       "#{@id}"
+      "#{@id}"
     end
 end
