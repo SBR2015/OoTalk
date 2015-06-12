@@ -11,16 +11,12 @@ class Variable < Expression
   
   public
 
-    def exec(vars={})
-       
-       vars={@value => nil,}
-       vars.merge(vars)
-       vars.each do |key,value| 
-       puts "#{key} => #{value}"
-      end
+    def exec(var={})
+       vars = {@id.to_sym => "abcd",}       
+       vars.merge(var) 
     end
 
     def to_s
-      "#{@id}"
+      "#{@id}" 
     end
 end
