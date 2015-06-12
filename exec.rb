@@ -17,6 +17,9 @@ num6 = Constant.new(0.2)
 num8 = Constant.new(8)
 num10 = Constant.new(10)
 
+#変数の宣言
+#var1 = Variable.new("x")
+
 # 演算子の宣言
 # operator = Array.new(100){Operator.new}
 operator = Array.new
@@ -66,7 +69,9 @@ operator.push "#{logarithm3.to_s} = #{logarithm3.exec}"
 operator.push "#{logarithm4.to_s} = #{logarithm4.exec}"
 operator.push "#{notequal1.to_s} = #{notequal1.exec}"
 operator.push "#{notequal2.to_s} = #{notequal2.exec}"
+#operator.push "#{var1.to_s} = #{var1.exec({:x => [1,2,3,4]})}"
 
 operator.each do |o|
   puts o
 end
+ 
