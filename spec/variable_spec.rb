@@ -22,6 +22,8 @@ describe 'Variable' do
   end
   
   it "exec" do
+    vars1 = Variable.new("x")
+    
     expect(vars1.exec).to be $vars["x"]
    # expect(vars2.exec).to be >= 0
    # expect(vars3.exec).to be 
