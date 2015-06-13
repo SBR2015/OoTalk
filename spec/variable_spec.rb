@@ -11,21 +11,19 @@ describe 'Variable' do
     vars1 = Variable.new("x")
     vars2 = Variable.new("y")
     vars3 = Variable.new("z")
-   # vars4 = Variable.new(0.999)
-   # vars5 = Variable.new(-9)
     
     expect(vars1.to_s.length).to be >= 0
     expect(vars2.to_s.length).to be >= 0
     expect(vars3.to_s.length).to be >= 0
-  #  expect(cons4.to_s.length).to be >= 0
-  #  expect(cons5.to_s.length).to be >= 0
   end
   
   it "exec" do
     vars1 = Variable.new("x")
-    
+    vars2 = Variable.new("y")
+    vars3 = Variable.new("z")
+
     expect(vars1.exec).to be $vars["x"]
-   # expect(vars2.exec).to be >= 0
-   # expect(vars3.exec).to be 
+    expect(vars2.exec).to be $vars["y"]
+    expect(vars3.exec).to be $vars["z"]
   end
 end
