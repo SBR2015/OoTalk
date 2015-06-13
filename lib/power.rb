@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/arithmeticOp'
+require File.dirname(__FILE__) + '/operator'
 
-class Power < ArithmeticOp
+class Power < Operator
 
   private
 
