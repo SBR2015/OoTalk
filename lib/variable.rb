@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/expression'
+require File.dirname(__FILE__) + '/assignment'
 
-class Variable < Expression
+class Variable 
   @@vars = {}
   private
 
