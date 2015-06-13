@@ -3,7 +3,7 @@ require_relative '../lib/variable.rb'
 
 describe 'Variable' do
   it "new" do
-    vars = Variable.new(x)
+    vars = Variable.new("x")
     expect(vars).to_not be_nil
   end
 

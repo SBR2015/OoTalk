@@ -12,7 +12,7 @@ class Variable < Expression
 
     def exec
       $vars = {}
-      $vars[@letf]
+      $vars[@left]
     end
    
     def to_s
