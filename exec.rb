@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
 
 # ライブラリの読み込み
 Dir[File.expand_path('../lib', __FILE__) << '/*.rb'].each do |file|
