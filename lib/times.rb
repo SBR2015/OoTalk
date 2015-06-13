@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/arithmeticOp'
+require File.dirname(__FILE__) + '/operator'
 
-class Times < ArithmeticOp
+class Times < Operator
   def initialize(left,right)
     super
     @operator = '*'
