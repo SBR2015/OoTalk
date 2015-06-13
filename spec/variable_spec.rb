@@ -22,7 +22,7 @@ describe 'Variable' do
   end
   
   it "exec" do
-    expect(vars1.exec).to be $vars[@vars1]
+    expect(vars1.exec).to be $vars["x"]
    # expect(vars2.exec).to be >= 0
    # expect(vars3.exec).to be 
   end
