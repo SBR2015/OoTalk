@@ -22,8 +22,8 @@ describe 'Variable' do
     vars2 = Variable.new("y")
     vars3 = Variable.new("z")
 
-    expect(vars1.exec).to be @@vars1["x"]
-    expect(vars2.exec).to be @@vars2["y"]
-    expect(vars3.exec).to be @@vars3["z"]
+    expect(vars1.exec).to be :vars1["x"]
+    expect(vars2.exec).to be :vars2["y"]
+    expect(vars3.exec).to be :vars3["z"]
   end
 end
