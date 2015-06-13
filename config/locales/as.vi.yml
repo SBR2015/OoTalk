@@ -16,7 +16,7 @@ vi:
     string: "Số dư của\t@left\tkhi chia cho\t@right"
   Logarithm:
     name: "Logarit"
-    string: "Logarit của\t@left\tvà\t@right"
+    string: "Logarit\t@left\tcủa\t@right"
   Power:
     name: "Hàm mũ"
     string: "@left\tmũ\t@right"
