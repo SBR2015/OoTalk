@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/expression'
 
 class Variable < Expression
-  
+  @@vars = {}
   private
 
     def initialize(id)
@@ -11,8 +11,7 @@ class Variable < Expression
   public
 
     def exec
-      $vars = {}
-      $vars[@left]
+      @@vars[@left]
     end
    
     def to_s
