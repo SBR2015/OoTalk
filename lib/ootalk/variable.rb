@@ -1,7 +1,7 @@
 module OoTalk
   class Variable
-    
-    attr_accessor :key 
+
+    attr_accessor :key
     @@name = {}
     private
 

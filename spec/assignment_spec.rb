@@ -1,0 +1,19 @@
+require 'spec_helper'
+require 'ootalk/assignment'
+Dir[File.expand_path('../ootalk', __FILE__) << '/*.rb'].each do |file|
+  require file
+end
+
+
+describe 'OoTalk::Assignment' do
+  it 'new' do
+    ass = OoTalk::Assignment.new(OoTalk::Variable.new('b'),OoTalk::Add.new(OoTalk::Constant.new(1),OoTalk::Constant.new(2)))
+    expect(ass).to_not be_nil
+  end
+  it 'exec' do
+    ass1 = OoTalk::Assignment.new(OoTalk::Variable.new('b'),OoTalk::Add.new(OoTalk::Constant.new(1),OoTalk::Constant.new(2)))
+    expect(ass1.exec).to be 3
+    ass2 = OoTalk::Assignment.new(OoTalk::Variable.new('b'),OoTalk::Times.new(OoTalk::Constant.new(1),OoTalk::Constant.new(2)))
+    expect(ass2.exec).to be 2
+  end
+end
