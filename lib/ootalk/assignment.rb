@@ -15,9 +15,12 @@ module OoTalk
     public
 
       def exec
-        source = @source.exec
-        @target = source
-        return source
+        @target = @source.exec
+        return @source.exec
+      end
+
+      def to_s
+        "#{@target} #{@op} #{@source.to_s}"
       end
 
   end
