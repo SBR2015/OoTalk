@@ -1,7 +1,7 @@
 module OoTalk
   class Variable
     
-    attr_accessor :key 
+    attr_accessor :key, :val 
     @@name = {}
     private
 
@@ -13,6 +13,11 @@ module OoTalk
 
     def exec
       @@name[@key]
+    end
+    
+    def value(val)
+      @val = val
+      @@name[@key] = @val
     end
 
     def to_s
