@@ -14,14 +14,14 @@ describe 'OoTalk::Assignment' do
   end
   it 'exec' do
     ass1 = OoTalk::Assignment.new(OoTalk::Variable.new('b'),OoTalk::Add.new(OoTalk::Constant.new(1),OoTalk::Constant.new(2)))
-    expect(ass1.exec).to be 3
+    expect(ass1.exec).to eq({"b"=>3})
     ass2 = OoTalk::Assignment.new(OoTalk::Variable.new('b'),OoTalk::Times.new(OoTalk::Constant.new(1),OoTalk::Constant.new(2)))
-    expect(ass2.exec).to be 2
+    expect(ass2.exec).to eq({"b"=>2})
   end
   it 'to_s' do
     ass1 = OoTalk::Assignment.new(OoTalk::Variable.new('b'),OoTalk::Add.new(OoTalk::Constant.new(1),OoTalk::Constant.new(2)))
-    expect(ass1.to_s).to eq('b = (1+2)')
+    expect(ass1.to_s).to eq("b=(1+2)")
     ass2 = OoTalk::Assignment.new(OoTalk::Variable.new('b'),OoTalk::Times.new(OoTalk::Constant.new(1),OoTalk::Constant.new(2)))
-    expect(ass2.to_s).to eq('b = (1*2)')
+    expect(ass2.to_s).to eq("b=(1*2)")
   end
 end

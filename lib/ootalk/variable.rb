@@ -1,3 +1,4 @@
+
 module OoTalk
   class Variable
 
@@ -13,6 +14,10 @@ module OoTalk
 
     def exec
       @@name[@key]
+    end
+
+    def name
+      return @@name
     end
 
     def to_s

@@ -1,6 +1,7 @@
 require 'ootalk/instruction'
 require 'ootalk/variable'
 require 'ootalk/operator'
+require 'ootalk/constant'
 
 module OoTalk
   class Assignment < Instruction
@@ -15,12 +16,12 @@ module OoTalk
     public
 
       def exec
-        @target = @source.exec
-        return @source.exec
+        @target.name[@target.key] = @source.exec
+        return @target.name
       end
 
       def to_s
-        "#{@target} #{@op} #{@source.to_s}"
+        "#{@target}#{@op}#{@source.to_s}"
       end
 
   end
