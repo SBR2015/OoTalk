@@ -16,8 +16,12 @@ module OoTalk
       @@name[@key]
     end
 
-    def name
+    def self.name
       return @@name
+    end
+
+    def self.name=(name)
+      @@name[name] = nil
     end
 
     def to_s

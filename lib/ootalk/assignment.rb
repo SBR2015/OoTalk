@@ -16,8 +16,8 @@ module OoTalk
     public
 
       def exec
-        @target.name[@target.key] = @source.exec
-        return @target.name
+        Variable.name[@target.key] = @source.exec
+        return @target.exec
       end
 
       def to_s
