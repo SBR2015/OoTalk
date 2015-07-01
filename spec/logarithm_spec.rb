@@ -2,22 +2,20 @@ require 'spec_helper'
 require 'ootalk/logarithm'
 
 describe 'logarithms' do
+  cons1 = OoTalk::Constant.new(10)
+  cons2 = OoTalk::Constant.new(2)
+  cons3 = OoTalk::Constant.new(3)
+  cons4 = OoTalk::Constant.new(8)
+  cons5 = OoTalk::Constant.new(0.2)
+  cons6 = OoTalk::Constant.new(0.04)
+  cons7 = OoTalk::Constant.new(1)
+
   it 'new' do
-    cons1 = OoTalk::Constant.new(10)
-    cons2 = OoTalk::Constant.new(2)
     logarithms = OoTalk::Logarithm.new(cons1, cons2)
     expect(logarithms).to_not be_nil
   end
 
   it 'exec' do
-    cons1 = OoTalk::Constant.new(10)
-    cons2 = OoTalk::Constant.new(2)
-    cons3 = OoTalk::Constant.new(3)
-    cons4 = OoTalk::Constant.new(8)
-    cons5 = OoTalk::Constant.new(0.2)
-    cons6 = OoTalk::Constant.new(0.04)
-    cons7 = OoTalk::Constant.new(1)
-
     logarithms1 = OoTalk::Logarithm.new(cons1, cons3)
     logarithms2 = OoTalk::Logarithm.new(cons2, cons4)
     logarithms3 = OoTalk::Logarithm.new(cons5, cons6)
@@ -35,15 +33,7 @@ describe 'logarithms' do
     expect(logarithms7.exec).to be == 0
   end
 
-    it "to_s" do  
-    cons1 = OoTalk::Constant.new(10)
-    cons2 = OoTalk::Constant.new(2)
-    cons3 = OoTalk::Constant.new(3)
-    cons4 = OoTalk::Constant.new(8)
-    cons5 = OoTalk::Constant.new(0.2)
-    cons6 = OoTalk::Constant.new(0.04)
-    cons7 = OoTalk::Constant.new(1)
-
+    it "to_s" do
     logarithms1 = OoTalk::Logarithm.new(cons1, cons3)
     logarithms2 = OoTalk::Logarithm.new(cons2, cons4)
     logarithms3 = OoTalk::Logarithm.new(cons5, cons6)

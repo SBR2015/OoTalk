@@ -16,7 +16,7 @@ module OoTalk
       end
 
       def to_s
-        return "(""#{@operator}#{@left}"")""(#{@right})"")"
+        return "#{@operator}#{@left}(#{@right})"
       end
   end
 end
