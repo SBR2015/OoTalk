@@ -22,11 +22,12 @@ describe "Ootalk::compound class" do
     end
    
     it "should execute exec properly" do
+      #5 の階乗を計算する結果
        expect(com.exec).to be 120
     end
 
     it "should execute to_s properly" do
-      #5 の階乗を計算する
+      #5 の階乗
       expect(com.to_s).to be ==  "(n=5;)((s=1;)((while true do\n  break unless (n>0)\n  s=(s*n)\n  n=(n-1)\nend;)(s)))"
     end
 end
