@@ -14,6 +14,7 @@ describe "Ootalk::compound class" do
    ss = OoTalk::Assignment.new(var1,sub)
    lp = OoTalk::Loop.new(gt,asst,ss)
 
+   # n = 5; x = 1; loop((s= s*n);(n = n-1));
    com =  OoTalk:: Compound.new(ass1, OoTalk:: Compound.new(ass2,OoTalk:: Compound.new(lp,var2)))
 
     it "should be initialized properly" do
@@ -25,6 +26,7 @@ describe "Ootalk::compound class" do
     end
 
     it "should execute to_s properly" do
+      #5 の階乗を計算する
       expect(com.to_s).to be ==  "(n=5;)((s=1;)((while true do\n  break unless (n>0)\n  s=(s*n)\n  n=(n-1)\nend;)(s)))"
     end
 end
