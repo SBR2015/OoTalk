@@ -2,12 +2,14 @@ require 'spec_helper'
 require 'ootalk/variable'
 
 describe 'OoTalk::Variable' do
-  vars1 = OoTalk::Variable.new('x')
-  vars2 = OoTalk::Variable.new('y')
-  vars3 = OoTalk::Variable.new('z')
-  vars4 = OoTalk::Variable.new('x')
+  before do
+    vars1 = OoTalk::Variable.new('x')
+    vars2 = OoTalk::Variable.new('y')
+    vars3 = OoTalk::Variable.new('z')
+    vars4 = OoTalk::Variable.new('x')
+  end
 
-  it 'new' do
+  it 'initialize' do
     expect(vars1).to_not be_nil
     expect(vars2).to_not be_nil
     expect(vars3).to_not be_nil

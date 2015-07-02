@@ -2,12 +2,14 @@ require 'spec_helper'
 require 'ootalk/not_equal'
 
 describe 'NotEqual' do
-  neq1 = OoTalk::NotEqual.new(OoTalk::Constant.new(1), OoTalk::Constant.new(2))
-  neq2 = OoTalk::NotEqual.new(OoTalk::Constant.new(2), OoTalk::Constant.new(1))
-  neq3 = OoTalk::NotEqual.new(OoTalk::Constant.new(1), OoTalk::Constant.new(1))
-  neq4 = OoTalk::NotEqual.new(OoTalk::Constant.new(2), OoTalk::Constant.new(2))
+  before do
+    neq1 = OoTalk::NotEqual.new(OoTalk::Constant.new(1), OoTalk::Constant.new(2))
+    neq2 = OoTalk::NotEqual.new(OoTalk::Constant.new(2), OoTalk::Constant.new(1))
+    neq3 = OoTalk::NotEqual.new(OoTalk::Constant.new(1), OoTalk::Constant.new(1))
+    neq4 = OoTalk::NotEqual.new(OoTalk::Constant.new(2), OoTalk::Constant.new(2))
+  end
 
-  it 'new' do
+  it 'initialize' do
     expect(neq1).to_not be_nil
     expect(neq2).to_not be_nil
     expect(neq3).to_not be_nil
