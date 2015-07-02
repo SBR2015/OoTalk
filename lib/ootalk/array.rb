@@ -14,7 +14,7 @@ module OoTalk
       #式列実行してから、最後の結果を返す
       def exec
         @array.map(&:exec)
-        return @array.last.exec
+        @array.last.exec
      end
      
      #式列の表示
