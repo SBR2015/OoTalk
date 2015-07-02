@@ -13,13 +13,13 @@ module OoTalk
       #@array.last.exec:最後の結果を返す
       #式列実行してから、最後の結果を返す
       def exec
-        @array.map(&:exec)
-        @array.last.exec
+        array_result = @array.map(&:exec)
+        array_result.last
      end
      
      #式列の表示
       def to_s
-        @array.map(&:to_s)
+        @array.map(&:to_s).to_s
       end
   end
 end
