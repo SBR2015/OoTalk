@@ -2,11 +2,8 @@ require 'spec_helper'
 require 'ootalk/add'
 
 describe 'Add' do
-  cons1 = OoTalk::Constant.new(1)
-  cons2 = OoTalk::Constant.new(2)
-  cons3 = OoTalk::Constant.new(3)
-  let(:add1) {OoTalk::Add.new(cons1, cons2)}
-  let(:add2) {OoTalk::Add.new(cons2, cons3)}
+  let(:add1) {OoTalk::Add.new(OoTalk::Constant.new(1), OoTalk::Constant.new(2)}
+  let(:add2) {OoTalk::Add.new(OoTalk::Constant.new(2), OoTalk::Constant.new(3)}
 
   it 'initialize' do
     expect(add1).to_not be_nil
