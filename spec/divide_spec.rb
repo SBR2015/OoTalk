@@ -2,12 +2,9 @@ require 'spec_helper'
 require 'ootalk/divide'
 
 describe 'divides' do
-  cons1 = OoTalk::Constant.new(15)
-  cons2 = OoTalk::Constant.new(5)
-  cons3 = OoTalk::Constant.new(3)
-  let(:divides1) {OoTalk::Divide.new(cons1, cons2)}
-  let(:divides2) {OoTalk::Divide.new(cons2, cons3)}
-  let(:divides3) {OoTalk::Divide.new(cons1, cons3)}
+  let(:divides1) {OoTalk::Divide.new(OoTalk::Constant.new(15),OoTalk::Constant.new(5))}
+  let(:divides2) {OoTalk::Divide.new(OoTalk::Constant.new(5),OoTalk::Constant.new(3))}
+  let(:divides3) {OoTalk::Divide.new(OoTalk::Constant.new(15),OoTalk::Constant.new(3))}
 
   it 'new' do
     expect(divides1).to_not be_nil
