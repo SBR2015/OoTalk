@@ -2,20 +2,13 @@ require 'spec_helper'
 require 'ootalk/logarithm'
 
 describe 'logarithms' do
-  cons1 = OoTalk::Constant.new(10)
-  cons2 = OoTalk::Constant.new(2)
-  cons3 = OoTalk::Constant.new(3)
-  cons4 = OoTalk::Constant.new(8)
-  cons5 = OoTalk::Constant.new(0.2)
-  cons6 = OoTalk::Constant.new(0.04)
-  cons7 = OoTalk::Constant.new(1)
-  let(:logarithms1) {OoTalk::Logarithm.new(cons1, cons3)}
-  let(:logarithms2) {OoTalk::Logarithm.new(cons2, cons4)}
-  let(:logarithms3) {OoTalk::Logarithm.new(cons5, cons6)}
-  let(:logarithms4) {OoTalk::Logarithm.new(cons1, cons5)}
-  let(:logarithms5) {OoTalk::Logarithm.new(cons6, cons3)}
-  let(:logarithms6) {OoTalk::Logarithm.new(cons6, cons7)}
-  let(:logarithms7) {OoTalk::Logarithm.new(cons1, cons7)}
+  let(:logarithms1) {OoTalk::Logarithm.new(OoTalk::Constant.new(10), OoTalk::Constant.new(3))}
+  let(:logarithms2) {OoTalk::Logarithm.new(OoTalk::Constant.new(2), OoTalk::Constant.new(8))}
+  let(:logarithms3) {OoTalk::Logarithm.new(OoTalk::Constant.new(0.2), OoTalk::Constant.new(0.04))}
+  let(:logarithms4) {OoTalk::Logarithm.new(OoTalk::Constant.new(10), OoTalk::Constant.new(0.2))}
+  let(:logarithms5) {OoTalk::Logarithm.new(OoTalk::Constant.new(0.04), OoTalk::Constant.new(3))}
+  let(:logarithms6) {OoTalk::Logarithm.new(OoTalk::Constant.new(0.04), OoTalk::Constant.new(1))}
+  let(:logarithms7) {OoTalk::Logarithm.new(OoTalk::Constant.new(10), OoTalk::Constant.new(1))}
 
   it 'initialize' do
     expect(logarithms1).to_not be_nil
