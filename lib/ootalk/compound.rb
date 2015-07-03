@@ -11,10 +11,12 @@ module OoTalk
     public
 
     def to_s
-      # '{'と';'を追加してから、change array to string
-      str = @array.map {|i| '{' + i.to_s}.join('; ')
+      # '{'と';'を追加する
+      arr = @array.map {|i| '{' + i.to_s}
       #最後式の前の'{'削除
-      str[-2] = ''
+      arr[-1] = 's;'
+      #change array to string
+      str = arr.join('; ')
       # '}'をstringに追加
       (@array.length-1).times{str.concat '}'}
       # 式列返す
