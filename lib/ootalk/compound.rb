@@ -12,9 +12,9 @@ module OoTalk
 
     def to_s
       # '{'と';'を追加する
-      arr = @array.map {|i| '{' + i.to_s}
+      arr =  @array.map {|i| '{' + i.to_s}
       #最後式の前の'{'削除
-      arr[-1] = 's;'
+      arr[-1] = @array.last.to_s + ';'
       #change array to string
       str = arr.join('; ')
       # '}'をstringに追加
