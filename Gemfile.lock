@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     ootalk (0.3.0)
+      i18n
 
 GEM
   remote: https://rubygems.org/
@@ -17,7 +18,7 @@ GEM
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.0)
+    rspec-core (3.4.1)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -38,10 +39,9 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.9)
   codeclimate-test-reporter
-  i18n
   ootalk!
   rake (~> 10.0)
   rspec
 
 BUNDLED WITH
-   1.10.4
+   1.10.6
