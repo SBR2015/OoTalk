@@ -127,8 +127,7 @@ describe 'program' do
     prog = Ootalk::Program.new('[{"Program":{"Assignment":{"Left":{"Variable":{"Left": "a"}}, "Right":{"Constant":{"Left":2}}}}},
     {"Program":{"Add":{"Left":{"Variable":{"Left": "a"}}, "Right":{"Constant":{"Left":3}}}}}
     ]')
-    expect(prog.exec[2]["result"]).to eq 2
-    expect(prog.exec[5]["result"]).to eq 5
+    expect(prog.exec[2]["result"]).to eq 3
   end
 
   it 'input_raw_data' do
